@@ -1,0 +1,21 @@
+{
+  "name": "@fuf/proxy",
+  "version": "0.0.1",
+  "description": "",
+  "keywords": [
+    "https",
+    "proxy"
+  ],
+  "bin": {
+    "proxy": "bin"
+  },
+  "author": "hakuna-tata <610578197@qq.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hakuna-tata/https-proxy.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
