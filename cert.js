@@ -4,7 +4,7 @@ const mkcert = require('mkcert');
 
 const genCert = async () => {
     // 创建 “CA认证机构” 
-    const result = await mkcert.createCA({
+    const ca = await mkcert.createCA({
         organization: 'Proxy CA',
         countryCode: 'CN',
         state: 'GuangDong',
@@ -12,12 +12,12 @@ const genCert = async () => {
         validityDays: 3650,
     });
     
-    // 生成证书
+    // 创建 TLS 证书
     return await mkcert.createCert({
         domains: ['localhost', '127.0.0.1'],
         validityDays: 3650,
-        caKey: result?.key,
-        caCert: result?.cert,
+        caKey: ca?.key, // CA private key
+        caCert: ca?.cert, // CA certificate
     });
 };
 
