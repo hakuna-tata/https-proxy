@@ -4,6 +4,6 @@ http.createServer((req, res) => {
     res.write('hello to proxy \n');
     res.end();
 
-}).listen(8989, () => {
-    console.log('server listening on 8989');
+}).listen(8080, () => {
+    console.log('server listening on 8080');
 }); 
